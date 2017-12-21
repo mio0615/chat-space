@@ -10,10 +10,12 @@
 |name|string|null: false unique: true|
 
 ### Association
-- has_many:
+- has_many: messages
+- has_many: members
+- has_many: groups
 
 
-## message table
+## messages table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -23,7 +25,8 @@
 |user_id|integer|null: false, foregin_key: true|
 
 ### Association
-
+- belongs_to :user
+- belongs_to :group
 
 ## members table
 
@@ -33,8 +36,8 @@
 |group_id|integer|null: false, foregin_key: true|
 
 ### Association
-- belongs_to :group
 - belongs_to :user
+- belongs_to :group
 
 ## groups table
 
@@ -44,4 +47,6 @@
 |name|string|null: false|
 
 ### Association
-- has_many :names
+- has_many :messages
+- has_many :members
+- has_many :users
