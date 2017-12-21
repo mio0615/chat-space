@@ -7,7 +7,7 @@
 |user_id|integer|null: false, foregin_key: true|
 |email|string|null: false  unique: true|
 |password|string|null: false, unique: true|
-|name|string|null: false unique: true|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many: messages
