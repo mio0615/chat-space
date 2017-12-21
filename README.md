@@ -21,6 +21,8 @@
 |group_id|integer|null: false, unique: true|
 |user_id|integer|null: false, unique: true|
 
+### Association
+
 
 ## members table
 
@@ -32,3 +34,14 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## groups table
+
+|Column|Type|Options|
+|------|----|-------|
+|group_id|integer|null: false|
+|name|string|null: false|
+
+### Association
+
+
